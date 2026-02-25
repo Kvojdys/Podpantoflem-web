@@ -333,6 +333,12 @@ footer {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 40px !important;
         align-items: start !important;
+
+/* TÍMTO OVLÁDÁTE ÚVODNÍ FOTKU JEN NA MOBILU */
+    .hero {
+        /* První číslo posouvá fotku doleva/doprava, druhé nahoru/dolů */
+        background-position: 65% 50%;
+        }
     }
 }
 
