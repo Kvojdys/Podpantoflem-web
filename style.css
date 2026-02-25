@@ -334,13 +334,10 @@ footer {
         gap: 40px !important;
         align-items: start !important;
 
-@media screen and (max-width: 768px) {
-    /* ... vaše ostatní kódy pro mobil ... */
-
-    .hero {
-        background-position: 85% 50% !important; /* <-- TADY HÝBETE FOTKOU NA MOBILU */
+.hero {
+        /* Tohle zarovná fotku úplně na pravý okraj. */
+        background-position: right center !important; 
     }
-}
     }
 }
 
