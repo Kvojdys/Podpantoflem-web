@@ -335,8 +335,12 @@ footer {
         align-items: start !important;
 
 .hero {
-        /* Tohle zarovná fotku úplně na pravý okraj. */
-        background-position: right center !important; 
+        /* Nahraje vaši novou vertikální fotku a zachová ten tmavý filtr pro čitelnost textu */
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-mobil.webp') !important;
+        
+        /* Fotka už je na výšku, takže středové zarovnání bude fungovat perfektně */
+        background-position: center !important; 
+        background-size: cover !important;
     }
     }
 }
