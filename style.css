@@ -333,17 +333,9 @@ footer {
         grid-template-columns: repeat(3, 1fr) !important;
         gap: 40px !important;
         align-items: start !important;
-
-.hero {
-        /* Nahraje vaši novou vertikální fotku a zachová ten tmavý filtr pro čitelnost textu */
-        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-mobil.webp') !important;
-        
-        /* Fotka už je na výšku, takže středové zarovnání bude fungovat perfektně */
-        background-position: center !important; 
-        background-size: cover !important;
-    }
-    }
+    } /* TATO ZÁVORKA TU CHYBĚLA A DĚLALA PASEKU */
 }
+
 
 .footer-box h4 {
     color: #fff;
@@ -421,6 +413,14 @@ footer {
     
     .pricing-card.highlight { transform: scale(1); margin: 20px 0; }
     .hero h1 { font-size: 2.5rem; }
+
+/* TADY MÁ BÝT TEN KÓD PRO MOBILNÍ FOTKU! */
+    .hero {
+        background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/hero-mobil.webp') !important;
+        background-position: center !important; 
+        background-size: cover !important;
+    }
+
     .about-container { flex-direction: column; }
     .about-img { width: 100%; height: 300px; }
     
