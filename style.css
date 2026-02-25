@@ -337,7 +337,7 @@ footer {
 /* TÍMTO OVLÁDÁTE ÚVODNÍ FOTKU JEN NA MOBILU */
     .hero {
         /* První číslo posouvá fotku doleva/doprava, druhé nahoru/dolů */
-        background-position: 65% 30%;
+        background-position: 90% 30%;
         }
     }
 }
