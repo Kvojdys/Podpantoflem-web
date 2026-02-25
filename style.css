@@ -334,11 +334,13 @@ footer {
         gap: 40px !important;
         align-items: start !important;
 
-/* TÍMTO OVLÁDÁTE ÚVODNÍ FOTKU JEN NA MOBILU */
+@media screen and (max-width: 768px) {
+    /* ... vaše ostatní kódy pro mobil ... */
+
     .hero {
-        /* První číslo posouvá fotku doleva/doprava, druhé nahoru/dolů */
-        background-position: 90% 30%;
-        }
+        background-position: 85% 50% !important; /* <-- TADY HÝBETE FOTKOU NA MOBILU */
+    }
+}
     }
 }
 
