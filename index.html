@@ -13,7 +13,14 @@
   gtag('js', new Date());
 
   gtag('config', 'G-31336W43E4');
-</script>
+  gtag('config', '724811912');
+
+
+
+
+
+  
+</script>  
     
     <title>Svatební fotograf Praha a celá ČR | PodPantoflem.cz</title>
     
@@ -356,5 +363,47 @@
             }
         });
     </script>
+
+
+<script>
+  var form = document.getElementById("contact-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("form-status"); // Místo, kde se ukáže "Odesláno"
+    var data = new FormData(event.target);
+    
+    // 1. Odeslání do Formspree
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // 2. ODESLÁNÍ KONVERZE DO GOOGLE ADS
+        gtag('event', 'conversion', {
+            'send_to': '724811912/do3sCLjM1P8bEIiBz9kC', // Sem vlož tvůj Label z Google Ads
+        });
+
+        // 3. Co se má stát na webu
+        status.innerHTML = "Děkuji! Poptávka byla odeslána. Ozvu se vám do 48 hodin.";
+        form.reset();
+        form.style.display = "none"; // Schová formulář po odeslání
+      } else {
+        status.innerHTML = "Chyba při odesílání. Zkuste to prosím znovu.";
+      }
+    }).catch(error => {
+      status.innerHTML = "Něco se nepovedlo, zkontrolujte připojení.";
+    });
+  }
+  
+  form.addEventListener("submit", handleSubmit)
+</script>
+
+
+
+
 </body>
 </html>
