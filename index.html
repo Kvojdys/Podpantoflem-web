@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Výchozí stav: vše zamítnuto
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500 // Počkáme 0,5s na případnou aktualizaci
+  });
+</script>
 
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-31336W43E4"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-31336W43E4"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-31336W43E4');
-  gtag('config', 'AW-724811912');
+  gtag('config', 'AW-724811912'); // Tvůj funkční kód pro Google Ads
+</script>
 
 
 
@@ -235,6 +245,9 @@
                         <li>Výběr 50 nejlepších fotek do 48 hodin od svatby</li>
                         <li><strong>Cesta po celé ČR zdarma</strong></li>
                     </ul>
+
+            
+   
                     <a href="#contact" class="btn-primary">Mám zájem</a>
                 </div>
             </div>
@@ -300,7 +313,8 @@
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Jezdím po celé České republice. V každém balíčku máte určitou vzdálenost od Prahy v ceně zdarma (30 km, 50 km nebo neomezeně u celodenního focení). Každý další kilometr navíc pak sazbou 6 Kč/km.</p>
+                    <p>Jezdím po celé České republice. V každém balíčku máte určitou vzdálenost od Prahy v ceně zdarma (30 km, 50 km nebo neomezeně u celodenního focení). 
+                        Každý další kilometr navíc pak sazbou 6 Kč/km. Sazba je počítaná za cestu tam i zpět.</p>
                 </div>
             </div>
 
@@ -516,6 +530,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+
+<div id="cookie-banner" class="cookie-bar">
+    <div class="cookie-content">
+        <p>
+            Tento web používá cookies, abych mohl měřit, co vás zajímá, a mohl vám pak ukázat své nejlepší fotky. 
+            Souhlasíte s jejich používáním?
+        </p>
+        <div class="cookie-buttons">
+            <button onclick="acceptCookies()" class="cookie-btn btn-accept">Souhlasím</button>
+            <button onclick="refuseCookies()" class="cookie-btn btn-refuse">Odmítnout</button>
+        </div>
+    </div>
+</div>
+
+
 
 
 
