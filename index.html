@@ -67,12 +67,14 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">O mně</a></li>
                     <li><a href="#pricing">Nabídka</a></li>
+                    <li><a href="#faq">Faq</a></li>
                     <li><a href="#contact" class="btn-primary">Pojďme se domluvit</a></li>
                 </ul>
                 <div class="burger">
                     <div class="line1"></div>
                     <div class="line2"></div>
                     <div class="line3"></div>
+                    <div class="line4"></div>
                 </div>
             </nav>
         </div>
@@ -236,12 +238,84 @@
                     <a href="#contact" class="btn-primary">Mám zájem</a>
                 </div>
             </div>
-            
             <p class="text-center" style="margin-top: 30px; color: #777;">
                 Máte jiné přání? <a href="#contact" style="color: var(--accent); font-weight: bold;">Napište mi</a> o individuální nabídku.
             </p>
         </div>
     </section>
+
+
+
+<section id="faq" class="section">
+    <div class="container">
+        <h2 class="section-title">Často kladené otázky</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kdy se můžeme na fotky těšit?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>První výběr těch nejlepších snímků (15–50 fotek) vám pošlu už do 48 hodin. Kompletní upravenou galerii odevzdávám obvykle do 2 týdnů.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Kolik fotek nakonec dostaneme?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Minimální počet vychází ze zvoleného balíčku – od 250+ u malé svatby až po 600+ u celodenního focení. 
+                        Tento počet ale není striktně omezen. Pokud uznám, že je povedených a důležitých záběrů víc, rozhodně je nebudu schovávat a dostanete je v rámci ceny navíc.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Co když nám bude na svatbě pršet?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Žádný stres, déšť většinou vůbec nevadí. I při něm se dají udělat vizuálně velmi zajímavé a netradiční kousky. 
+                        Jsem na to vybaven, v autě mám vždy připravené stylové průhledné deštníky a v záloze mám vždy i varianty focení v interiérech.</p>
+                </div>
+            </div>
+
+
+                <div class="faq-item">
+                <button class="faq-question">
+                    Jezdíte i mimo Prahu a Střední Čechy?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Jezdím po celé České republice. V každém balíčku máte určitou vzdálenost od Prahy v ceně zdarma (30 km, 50 km nebo neomezeně u celodenního focení). Každý další kilometr navíc pak sazbou 6 Kč/km.</p>
+                </div>
+            </div>
+
+
+<div class="faq-item">
+                <button class="faq-question">
+                    Jaká je výše zálohy a co storno?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Pro závaznou rezervaci termínu se hradí rezervační poplatek ve výši 20 % z ceny zvoleného balíčku. Tato částka je standardně nevratná, protože mi blokuje termín, který bych jinak mohl nabídnout jinému páru. Chápu ale, že život se někdy naplánovat nedá. Při zrušení nebo změně termínu více než 90 dní před svatbou se můžeme bez problému domluvit na přesunu zálohy na jiný můj volný termín v rámci dané sezóny. Pokud by ale k nečekané změně došlo i později, třeba měsíc před svatbou, dělám maximum pro to, abych vám vyšel vstříc. 
+                        Pokud budu mít náhradní termín volný, rád vám jej nabídnu, abyste o zálohu nepřišli a váš den proběhl v klidu a bez stresu.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
 
     <section id="contact" class="section bg-dark">
         <div class="container contact-container">
@@ -403,6 +477,33 @@
       
       form.addEventListener("submit", handleSubmit);
     </script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            // Najdeme rodičovský element .faq-item
+            const item = this.parentElement;
+            
+            // Zavřeme ostatní otevřené (pokud chceme harmoniku)
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Přepneme (toggle) třídu active u kliknuté položky
+            item.classList.toggle('active');
+            
+            // Log do konzole pro kontrolu (můžete pak smazat)
+            console.log('FAQ kliknuto, aktivní: ' + item.classList.contains('active'));
+        });
+    });
+});
+</script>
 
 
 
